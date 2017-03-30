@@ -1,0 +1,53 @@
+{% extends 'basic.html' %}
+{% block content %}
+<h2>{{ order.order }}</h2><br>
+    <div class="ui divided list">
+        <div class="item">代理公司：{{ order.company }}</div>
+        <div class="item">柜数：{{ order.container }}</div>
+    <div class="item">价格：{{ order.price }}</div>
+        <div class="item">备注：{{ order.ps }}</div>
+        <div class="item">录入用户：{{ order.entry_user }}</div>
+    <div class="item">更新日期：{{ order.updated }}</div>
+        <div class="item">创建日期：{{ order.created }}</div>
+    </div>
+
+     {% if orderitems %}
+<table class="ui table">
+
+  <thead>
+    <tr>
+      <th>编号</th>
+      <th>长</th>
+      <th>宽</th>
+      <th>高</th>
+        <th>m3</th>
+      <th>重量</th>
+        <th>批次</th>
+    </tr>
+  </thead>
+    {% for item in orderitems %}
+  <tbody>
+    <tr>
+      <td>{{ item.block_num }}</td>
+      <td>{{ item.long }}</td>
+      <td>{{ item.width }}</td>
+      <td>{{ item.high }}</td>
+        <td>{{ item.m3 }}</td>
+      <td>{{ item.weight }}</td>
+        <td>{{ item.batch }}</td>
+    </tr>
+  </tbody>
+        <tfoot>
+    <tr>
+        <th>{{ count }}</th>
+    <th></th>
+    <th></th>
+        <th></th>
+    <th></th>
+        <th>{{ total.weight }}</th>
+        th></th>
+  </tr></tfoot>
+    {% endfor %}
+</table>
+{% endif %}
+{% endblock %}

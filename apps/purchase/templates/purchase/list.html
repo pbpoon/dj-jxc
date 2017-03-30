@@ -1,0 +1,8 @@
+{% extends 'basic.html' %}
+{% block content %}
+<div class="ui button"><a href="{% url 'purchase:addorder' %}">新建订单</a></div>
+{% for order in order_list %}
+<h3><a href="{{ order.get_absolute_url }}">{{order.order}}</a></h3>
+    {{ order.company }}
+{% endfor %}
+{% endblock %}

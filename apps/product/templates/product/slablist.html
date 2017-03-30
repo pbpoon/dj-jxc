@@ -1,0 +1,33 @@
+{% extends 'basic.html' %} {% block content %}
+    <div class="ui segment">
+        {{ slablist.block_num }} {{ slablist.thick }} {{ slablist.created }} {{ slablist.user }}
+    </div>
+    <div class="ui content">
+    <form class="form" method="post" action="{% url 'cart:add' slablist.id %}">
+    {% csrf_token %}
+        {% regroup slablistitem by part_num as part_list %}
+        <div class="ui list">
+            {% for part_num in part_list %}
+                <div class="ui segment">
+                    <div class="item">
+                        <div class="ui header">{{ part_num.grouper }}</div>
+                        <div class="ui divider"></div>
+                        <div class="ui ordered list">
+                            {% for items in part_num.list %}
+                                <div class="item">
+                                   <input type="checkbox" value="{{ items.id }}" name="check_box_list"/>{{ items.long }}
+                                    x {{ items.high }}{% if items.kl1 %}( {{ items.kl1 }}x{{ items.kh1 }}){% if kl2 %}-(
+                                        {{ items.kl2 }}x{{ items.kh2 }}) {% endif %}{% endif %}</div>
+                                <div class="ui divider"></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    <input type="submit" value="提交"/>
+    </form>
+    </div>
+
+
+{% endblock %}

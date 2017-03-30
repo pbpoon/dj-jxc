@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+{% block content %}
+    <table class="ui table">
+  <thead>
+    <tr>
+      <th>编号</th>
+      <th>形态</th>
+      <th>数量</th>
+      <th>码单</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for item in cart %}
+        {% with product=item.product %}
+    <tr>
+      <td>{{ product.block_num }}</td>
+      <td>{{ product.type }}</td>
+      <td>{{ product.type }}</td>
+      <td>
+{#          <form class="form" method="post" action="{% url 'cart:add' item.key %}">#}
+          <a href="{% url 'cart:slablist' item.key %}">打开码单</a>
+{#          </form>#}
+      </td>
+    </tr>
+        {% endwith %}
+{#{% endfor %}#}
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

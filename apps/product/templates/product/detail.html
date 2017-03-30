@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{% block content %}
+<h2>{{ product.block_num }}</h2><br>
+    <div class="ui divided list">
+        <div class="item">重量：{{ product.weight }}</div>
+        <div class="item">立方：{{ product.m3 }}</div>
+    <div class="item">尺寸：{{ product.long }}x{{ product.width }}x{{ product.high }}</div>
+    <div class="item">批次：{{ product.batch }}</div>
+        <div class="item">形态：{{ product.type }}</div>
+    <div class="item">更新日期：{{ product.updated }}</div>
+        <div class="item">创建日期：{{ product.created }}</div>
+    </div>
+     <div class="ui horizontal divided  list">
+     {% for item in slablist %}
+     <a class="item" href="{% url 'product:slablist' item.id %}">{{ item.thick }}</a>
+          <div class="item">{{ item.user }}</div>
+          <div class="item">{{ item.created }}</div>
+     {% endfor %}
+     </div>
+{% endblock %}
