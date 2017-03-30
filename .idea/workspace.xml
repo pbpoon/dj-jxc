@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12d928e4-4ff6-4634-aafc-daf69c9fef5c" name="Default" comment="" />
+    <list default="true" id="12d928e4-4ff6-4634-aafc-daf69c9fef5c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +39,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/purchase/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+            <state relative-caret-position="385">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -69,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/apps/purchase/templates/purchase/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+              <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -308,16 +311,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\purchase\templates\purchase" />
-      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps" />
-      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\cart\templates\cart" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc" />
       <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\purchase\migrations" />
       <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\cart" />
       <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\product\templates\product" />
       <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\cart" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\purchase\templates\purchase" />
+      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps" />
+      <recent name="C:\Users\pbpoo_000\skydrive\python\jxc\apps\cart\templates\cart" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.jxc">
@@ -1049,7 +1053,7 @@
     <entry file="file://$PROJECT_DIR$/apps/purchase/templates/purchase/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1074,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/purchase/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+        <state relative-caret-position="385">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
