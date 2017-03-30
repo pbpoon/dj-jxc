@@ -1,0 +1,39 @@
+{% extends 'basic.html' %}
+{% block content %}
+ <form method="post" action="{% url 'purchase:addorder' %}" enctype="multipart/form-data">
+     {% csrf_token %}
+     {{ form.as_p }}
+ </form>
+
+       <table class="ui collapsing basic table">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>重量</th>
+            <th>长</th>
+            <th>宽</th>
+            <th>高</th>
+            <th>立方</th>
+            <th>批次</th>
+        </tr>
+        </thead>
+        <form method="post" action="">
+            <tbody>
+            {{ formset.management_form }}
+            {% for form in formset %}
+                <tr>
+                    <td>{{ form.block_num }}</td>
+                    <td>{{ form.weight }}</td>
+                    <td>{{ form.long }}</td>
+                    <td>{{ form.width }}</td>
+                    <td>{{ form.high }}</td>
+                    <td>{{ form.m3 }}</td>
+                    <td>{{ form.batch }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            {% csrf_token %}
+            <input type="submit" value="提交">
+        </form>
+    </table>
+{% endblock %}

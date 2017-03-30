@@ -88,7 +88,7 @@ class Batch(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return '{}:{}'.format(self.category,self.name)
+        return '{0}票'.format(self.name)
 
 
 class Category(models.Model):

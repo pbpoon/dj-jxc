@@ -3,7 +3,6 @@ __author__ = 'pb'
 __date__ = '2017/3/22 12:25'
 
 from django import forms
-from django.forms.models import inlineformset_factory
 from .models import ImportOrder,ImportOrderDetail
 from product.models import Product
 
@@ -44,6 +43,10 @@ class ImportProductForm(forms.ModelForm):
             }),
 
         }
+
+
+# ImportOrderDetailFormset = inlineformset_factory(ImportOrder, form=ImportProductForm)
+
 
 class ExcelFileForm(forms.Form):
     excelfile = forms.FileField()

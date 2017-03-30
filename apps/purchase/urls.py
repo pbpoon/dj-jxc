@@ -6,6 +6,7 @@ from . import views
 
 
 urlpatterns = [
+    url(r'^edit/(?P<order>\w+)/$', views.editorder,name='editorder'),
     url(r'^add/$', views.addorder,name='addorder'),
     url(r'^(?P<order>\w+)/$', views.orderdetail,name='detail'),
     url(r'^', views.OrderListView.as_view(),name='index'),

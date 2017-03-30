@@ -1,6 +1,7 @@
 {% extends 'basic.html' %}
 {% block content %}
 <h2>{{ order.order }}</h2><br>
+    <a class="ui button" href="{% url "purchase:editorder" order.order %}">编辑</a>
     <div class="ui divided list">
         <div class="item">代理公司：{{ order.company }}</div>
         <div class="item">柜数：{{ order.container }}</div>
@@ -10,10 +11,8 @@
     <div class="item">更新日期：{{ order.updated }}</div>
         <div class="item">创建日期：{{ order.created }}</div>
     </div>
-
      {% if orderitems %}
 <table class="ui table">
-
   <thead>
     <tr>
       <th>编号</th>
@@ -37,17 +36,19 @@
         <td>{{ item.batch }}</td>
     </tr>
   </tbody>
+    {% endfor %}
         <tfoot>
     <tr>
-        <th>{{ count }}</th>
+        <th>{{ count }}颗</th>
     <th></th>
     <th></th>
         <th></th>
     <th></th>
-        <th>{{ total.weight }}</th>
-        th></th>
-  </tr></tfoot>
-    {% endfor %}
+        <th>{{ total.weight }}吨</th>
+        <th></th>
+  </tr>
+        </tfoot>
+
 </table>
 {% endif %}
 {% endblock %}
